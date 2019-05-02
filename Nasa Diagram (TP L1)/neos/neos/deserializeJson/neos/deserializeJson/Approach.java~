@@ -1,0 +1,46 @@
+package neos.deserializeJson;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.time.LocalDate;
+
+public class Approach {
+
+  @JsonProperty("close_approach_date")
+  private LocalDate closeApproachDate;
+
+  @JsonProperty("epoch_date_close_approach")
+  private long epochDateCloseApproach;
+
+  @JsonProperty("relative_velocity")
+  private Velocity relativeVelocity;
+
+  @JsonProperty("miss_distance")
+  private Distance missDistance;
+
+  @JsonProperty("orbiting_body")
+  private String orbitingBody;
+
+
+  public LocalDate getCloseApproachDate() {
+    return closeApproachDate;
+  }
+
+  public long getEpochDateCloseApproach() {
+    return epochDateCloseApproach;
+  }
+
+  public Velocity getRelativeVelocity() {
+    return relativeVelocity;
+  }
+
+  public Distance getMissDistance() {
+    return missDistance;
+  }
+
+  public String getOrbitingBody() {
+    return orbitingBody;
+  }
+
+
+}

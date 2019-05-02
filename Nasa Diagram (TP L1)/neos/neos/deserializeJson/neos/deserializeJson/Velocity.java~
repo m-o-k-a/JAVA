@@ -1,0 +1,23 @@
+package neos.deserializeJson;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class Velocity {
+
+  @JsonProperty("kilometers_per_second")
+  private double kilometersPerSecond;
+
+  @JsonProperty("kilometers_per_hour")
+  private double kilometersPerHour;
+
+  @JsonProperty("miles_per_hour")
+  private double milesPerHour;
+
+  public double getKilometersPerSecond() {
+    return kilometersPerSecond;
+  }
+
+  public double getKilometersPerHour() {
+    return kilometersPerHour;
+  }
+}

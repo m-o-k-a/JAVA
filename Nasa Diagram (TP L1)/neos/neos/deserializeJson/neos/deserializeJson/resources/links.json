@@ -1,0 +1,5 @@
+{
+  "next" : "https://api.nasa.gov/neo/rest/v1/neo/browse?page=2&size=20&api_key=myRandomKey",
+  "prev" : "https://api.nasa.gov/neo/rest/v1/neo/browse?page=0&size=20&api_key=myRandomKey",
+  "self" : "https://api.nasa.gov/neo/rest/v1/neo/browse?page=1&size=20&api_key=myRandomKey"
+}

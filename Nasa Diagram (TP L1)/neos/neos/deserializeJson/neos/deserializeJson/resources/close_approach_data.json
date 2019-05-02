@@ -1,0 +1,16 @@
+{
+  "close_approach_date": "1994-08-21",
+  "epoch_date_close_approach": 777452400000,
+  "relative_velocity": {
+    "kilometers_per_second": "4.1034418713",
+    "kilometers_per_hour": "14772.3907366372",
+    "miles_per_hour": "9178.9891218843"
+  },
+  "miss_distance": {
+    "astronomical": "0.3257951697",
+    "lunar": "126.7343215942",
+    "kilometers": "48738264",
+    "miles": "30284554"
+  },
+  "orbiting_body": "Earth"
+}

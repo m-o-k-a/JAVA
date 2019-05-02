@@ -1,0 +1,86 @@
+package neos.deserializeJson;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.Arrays;
+import java.util.List;
+
+@JsonIgnoreProperties(ignoreUnknown=true)
+public class NearEarthObject {
+
+  public NEOLink getLinks() {
+    return links;
+  }
+
+  public String getNeoReferenceId() {
+    return neoReferenceId;
+  }
+
+  public String getDesignation() {
+    return designation;
+  }
+
+  public String getNasaJplUrl() {
+    return nasaJplUrl;
+  }
+
+  public double getAbsoluteMagnitudeH() {
+    return absoluteMagnitudeH;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public Diameter getEstimatedDiameter() {
+    return estimatedDiameter;
+  }
+
+  public boolean isPotentiallyHazardous() {
+    return isPotentiallyHazardous;
+  }
+
+  public List<Approach> getCloseApproachData() {
+    return Arrays.asList(closeApproachData);
+  }
+
+  public OrbitalData getOrbitalData() {
+    return orbitalData;
+  }
+
+  public boolean isSentryObject() {
+    return isSentryObject;
+  }
+
+  private NEOLink links;
+
+  @JsonProperty("neo_reference_id")
+  private String neoReferenceId;
+
+  private String designation;
+
+  @JsonProperty("nasa_jpl_url")
+  private String nasaJplUrl;
+
+  @JsonProperty("absolute_magnitude_h")
+  private double absoluteMagnitudeH;
+
+  private String name;
+
+  @JsonProperty("estimated_diameter")
+  private Diameter estimatedDiameter;
+
+  @JsonProperty("is_potentially_hazardous_asteroid")
+  private boolean isPotentiallyHazardous;
+
+  @JsonProperty("close_approach_data")
+  private Approach[] closeApproachData;
+
+  @JsonProperty("orbital_data")
+  private OrbitalData orbitalData;
+
+  @JsonProperty("is_sentry_object")
+  private boolean isSentryObject;
+
+}

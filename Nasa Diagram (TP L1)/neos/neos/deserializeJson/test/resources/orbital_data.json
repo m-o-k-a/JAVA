@@ -1,0 +1,29 @@
+{
+  "orbit_id": "12",
+  "orbit_determination_date": "2017-04-06 09:18:13",
+  "first_observation_date": "1994-10-09",
+  "last_observation_date": "1994-10-27",
+  "data_arc_in_days": 18,
+  "observations_used": 27,
+  "orbit_uncertainty": "7",
+  "minimum_orbit_intersection": ".260198",
+  "jupiter_tisserand_invariant": "3.177",
+  "epoch_osculation": "2458600.5",
+  "eccentricity": ".5267311176088368",
+  "semi_major_axis": "2.63115523824529",
+  "inclination": "7.01725043161831",
+  "ascending_node_longitude": "200.9095563635586",
+  "orbital_period": "1558.899562680662",
+  "perihelion_distance": "1.245243899002003",
+  "perihelion_argument": "119.2787798944603",
+  "aphelion_distance": "4.017066577488577",
+  "perihelion_time": "2458938.901357101078",
+  "mean_anomaly": "281.8522530425884",
+  "mean_motion": ".230932132267039",
+  "equinox": "J2000",
+  "orbit_class": {
+    "orbit_class_type": "AMO",
+    "orbit_class_description": "Near-Earth asteroid orbits similar to that of 1221 Amor",
+    "orbit_class_range": "1.017 AU < q (perihelion) < 1.3 AU"
+  }
+}

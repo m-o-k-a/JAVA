@@ -1,0 +1,18 @@
+{
+  "kilometers": {
+    "estimated_diameter_min": 0.2315021222,
+    "estimated_diameter_max": 0.5176544822
+  },
+  "meters": {
+    "estimated_diameter_min": 231.5021222103,
+    "estimated_diameter_max": 517.6544821978
+  },
+  "miles": {
+    "estimated_diameter_min": 0.1438487052,
+    "estimated_diameter_max": 0.3216554833
+  },
+  "feet": {
+    "estimated_diameter_min": 759.5214226325,
+    "estimated_diameter_max": 1698.3415313737
+  }
+}
