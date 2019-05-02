@@ -1,0 +1,26 @@
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<GridPane fx:controller="fr.univamu.asteroid.view.View"
+          xmlns:fx="http://javafx.com/fxml"
+          alignment="TOP_LEFT"
+          hgap="0"
+          vgap="0">
+
+    <HBox prefWidth="1200">
+
+        <VBox prefWidth="400" spacing="10">
+            <Label text="Inspection"/>
+            <!--<Label fx:id="spaceshipPositionLabel" text="Position du vaisseau :"/>-->
+            <!--<Label fx:id="spaceshipVelocityLabel" text="Vitesse du vaisseau :"/>-->
+
+            <TreeView fx:id="treeView" prefHeight="700"/>
+        </VBox>
+
+        <Canvas fx:id="canvas"> </Canvas>
+    </HBox>
+
+</GridPane>
