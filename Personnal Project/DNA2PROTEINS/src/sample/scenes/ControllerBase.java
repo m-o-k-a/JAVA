@@ -14,6 +14,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import sample.Controller;
 
+import static sample.Main.cc;
 import static sample.Main.np;
 import static sample.Main.pn;
 
@@ -22,17 +23,15 @@ public class ControllerBase implements Controller {
     public VBox root;
     public ControllerBase() {
         //CREATE MENU
-        Menu menu0 = new Menu("Help");
-        Menu menu1 = new Menu("Converter");
+        Menu menu0 = new Menu("<Help>");
+        Menu menu1 = new Menu("<Converter>");
         MenuItem menuItem1 = new MenuItem("N->P");
         MenuItem menuItem2 = new MenuItem("P->[Na-Nk]");
         MenuItem menuItem3 = new MenuItem("N->C");
-        menu1.getItems().add(menuItem1);
-        menu1.getItems().add(menuItem2);
-        menu1.getItems().add(menuItem3);
         //BUILD MENU
         MenuBar menuBar = new MenuBar();
-        menuBar.getMenus().addAll(menu1, menu0);
+        menu1.getItems().addAll(menuItem1, menuItem2, menuItem3);
+        menuBar.getMenus().addAll(menu0, menu1);
         //ADD LISTENER
         menuItem1.setOnAction(e -> {
             System.out.println("N->P Selected");
@@ -44,6 +43,7 @@ public class ControllerBase implements Controller {
         });
         menuItem3.setOnAction(e -> {
             System.out.println("N->C Selected");
+            menuBar.getScene().setRoot(cc.getContent());
         });
         //END OF MENU
         menuBar.setStyle("-fx-border-color: #0096C9; -fx-border-style: solid; -fx-border-width: 2; -fx-border-height: 2;");

@@ -14,6 +14,7 @@ public class Converter {
 
     public List<String> sequencesToProteins(String sequence, Table table) {
         List<String> data = new ArrayList<>();
+        sequence = sequence.toUpperCase();
         if (sequence.length()%3 == 1){ sequence = sequence.substring(0, sequence.length()-1); }
         if (sequence.length()%3 == 2){ sequence = sequence.substring(0, sequence.length()-2); }
         for (int i = 0; i < sequence.length(); i += 3 ) {
@@ -23,16 +24,28 @@ public class Converter {
     }
 
     public List<List<String>> proteinsToSequence(String proteins, Table table) {
+        proteins = proteins.toUpperCase();
         List<List<String>> data = new ArrayList<>();
         for (int i = 0; i < proteins.length(); i++ ) {
-            data.add(table.getSequences(String.valueOf(proteins.charAt(i))));
+            //special stop value
+            if (i+4 <= proteins.length()) { if(proteins.substring(i,i+4).equals("STOP")) { data.add(table.getSequences("STOP")); i+=3;} }
+            else { data.add(table.getSequences(String.valueOf(proteins.charAt(i)))); }
         }return data;
     }
 
     public String getComplementary(String sequences, Table table) {
+        sequences = sequences.toUpperCase();
         String data = "";
         for (int i = 0; i < sequences.length(); i++) {
             data += table.getComplement(String.valueOf(sequences.charAt(i)));
         }return data;
     }
+
+    public String drawSequences(List<String> datas) {
+        String data = "";
+        for(String value : datas) {
+            data += value;
+        }return data;
+    }
+
 }

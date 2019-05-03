@@ -19,12 +19,12 @@ import static sample.Main.*;
 import static sample.Main.converter;
 import static sample.Main.reference;
 
-public class ControllerPN implements Controller {
+public class ControllerC implements Controller {
     /*
         Build Scene
     */
     private VBox root = new VBox();
-    public ControllerPN() {
+    public ControllerC() {
         /*
             ADD MENU
          */
@@ -62,19 +62,19 @@ public class ControllerPN implements Controller {
         lineText.setTranslateY(665);
         lineText.setStroke(Color.web("#0096C9"));
         lineText.setStrokeWidth(2);
-        Text text = new Text("INFO: CONVERT PROTEINS TO ALL THE POSSIBLES NUCLEOTIDES SEQUENCES");
+        Text text = new Text("INFO: GET THE COMPLEMENTARY OF NUCLEOTIDES SEQUENCES");
         text.setFill(Color.web("#0096C9"));
         text.setTranslateY(685);
         root.getChildren().add(text);
         root.getChildren().add(lineText);
 
         //DRAW CONTENT TEXT
-        Text info1 = new Text("Enter the Proteins sequence to convert:");
+        Text info1 = new Text("Enter the Nucleotides sequence to convert:");
         info1.setScaleX(2);
         info1.setScaleY(2);
         info1.setFill(Color.web("#0096C9"));
         info1.setTranslateY(-10);
-        info1.setTranslateX(110);
+        info1.setTranslateX(120);
         Rectangle rect1 = new Rectangle(0,0,1280, 300);
         rect1.setStrokeWidth(2);
         rect1.setStroke(Color.web("#0096C9"));
@@ -127,7 +127,7 @@ public class ControllerPN implements Controller {
         });
         menu2Item2.setOnAction(e -> {
             System.out.println("Generate");
-            output.setText(converter.proteinsToSequence(input.getText(), reference).toString());
+            output.setText(converter.getComplementary(input.getText(), reference));
         });
 
     }

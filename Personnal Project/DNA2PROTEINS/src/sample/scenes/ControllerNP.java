@@ -1,5 +1,6 @@
 package sample.scenes;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
@@ -15,8 +16,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import sample.Controller;
 
-import static sample.Main.np;
-import static sample.Main.pn;
+import static sample.Main.*;
 
 public class ControllerNP implements Controller {
     /*
@@ -28,17 +28,19 @@ public class ControllerNP implements Controller {
             ADD MENU
          */
         //ADD CATEGORIES
-        Menu menu0 = new Menu("Help");
-        Menu menu1 = new Menu("Converter");
+        Menu menu0 = new Menu("<Help>");
+        Menu menu1 = new Menu("<Converter>");
+        Menu menu2 = new Menu("Tools");
         MenuItem menuItem1 = new MenuItem("N->P");
         MenuItem menuItem2 = new MenuItem("P->[Na-Nk]");
         MenuItem menuItem3 = new MenuItem("N->C");
-        menu1.getItems().add(menuItem1);
-        menu1.getItems().add(menuItem2);
-        menu1.getItems().add(menuItem3);
+        MenuItem menu2Item1 = new MenuItem("Clear Values");
+        MenuItem menu2Item2 = new MenuItem("Generate Output");
         //BUILD MENU
         MenuBar menuBar = new MenuBar();
-        menuBar.getMenus().addAll(menu1, menu0);
+        menu1.getItems().addAll(menuItem1, menuItem2, menuItem3);
+        menu2.getItems().addAll(menu2Item1, menu2Item2);
+        menuBar.getMenus().addAll(menu0, menu1, menu2);
         //ADD LISTENER
         menuItem1.setOnAction(e -> {
             System.out.println("N->P Selected");
@@ -77,7 +79,16 @@ public class ControllerNP implements Controller {
         rect1.setStroke(Color.web("#0096C9"));
         rect1.setTranslateX(4);
         rect1.setFill(Color.WHITE);
-        //TODO INPUT
+
+        TextArea input = new TextArea();
+        input.setWrapText(true);
+        input.setMinHeight(298);
+        input.setMinWidth(1279);
+        HBox inputHBox = new HBox(input);
+        inputHBox.setTranslateY(-618);
+        inputHBox.setTranslateX(5);
+        input.setStyle("-fx-focus-color: transparent; -fx-text-box-border: transparent; -fx-text-fill: #0096C9;");
+
         Text info3 = new Text("Result:");
         info3.setScaleX(2);
         info3.setScaleY(2);
@@ -90,12 +101,33 @@ public class ControllerNP implements Controller {
         rect2.setTranslateX(4);
         rect2.setTranslateY(11);
         rect2.setFill(Color.WHITE);
-        //TODO OUTPUT
+
+        TextArea output = new TextArea("OUPUT");
+        output.setWrapText(true);
+        HBox outputHBox = new HBox(output);
+        output.setMinHeight(298);
+        output.setMinWidth(1275);
+        outputHBox.setTranslateY(-588);
+        outputHBox.setTranslateX(10);
+        output.setStyle("-fx-focus-color: transparent; -fx-text-box-border: transparent; -fx-text-fill: #0096C9;");
+
         root.getChildren().add(info1);
         root.getChildren().add(rect1);
         root.getChildren().add(info3);
         root.getChildren().add(rect2);
+        root.getChildren().add(inputHBox);
+        root.getChildren().add(outputHBox);
 
+        //UPDATE LISTENER
+        menu2Item1.setOnAction(e -> {
+            System.out.println("Clear Values");
+            input.setText("");
+            output.setText("");
+        });
+        menu2Item2.setOnAction(e -> {
+            System.out.println("Generate");
+            output.setText(converter.drawSequences(converter.sequencesToProteins(input.getText(), reference)));
+        });
     }
 
     @Override

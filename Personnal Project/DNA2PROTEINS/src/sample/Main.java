@@ -1,5 +1,7 @@
 package sample;
 
+import data.Converter;
+import data.Table;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,8 +14,11 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import sample.scenes.ControllerBase;
+import sample.scenes.ControllerC;
 import sample.scenes.ControllerNP;
 import sample.scenes.ControllerPN;
+
+import java.util.Map;
 
 public class Main extends Application {
     /*
@@ -22,6 +27,10 @@ public class Main extends Application {
     public static ControllerBase base = new ControllerBase();
     public static ControllerNP np = new ControllerNP();
     public static ControllerPN pn = new ControllerPN();
+    public static ControllerC cc = new ControllerC();
+    public static Table reference = new Table();
+    public static Map<String, String> correspondences = reference.getCorrespondences();
+    public static Converter converter = new Converter(correspondences);
 
 
     @Override
@@ -29,7 +38,7 @@ public class Main extends Application {
         /*
             CREATE GRAPHIC INTERFACE
          */
-        primaryStage.setTitle("Dna To Proteins - V0.1 - Eddy Ikhlef");
+        primaryStage.setTitle("Dna To Proteins - V1.0 - Eddy Ikhlef");
         Image image = new Image("img/ico.png");
         primaryStage.getIcons().add(image);
         /*
