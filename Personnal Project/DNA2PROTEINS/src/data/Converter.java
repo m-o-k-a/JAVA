@@ -28,8 +28,8 @@ public class Converter {
         List<List<String>> data = new ArrayList<>();
         for (int i = 0; i < proteins.length(); i++ ) {
             //special stop value
-            if (i+4 <= proteins.length()) { if(proteins.substring(i,i+4).equals("STOP")) { data.add(table.getSequences("STOP")); i+=3;} }
-            else { data.add(table.getSequences(String.valueOf(proteins.charAt(i)))); }
+            if (i+4 <= proteins.length()) { if(proteins.substring(i,i+4).equals("STOP")) { data.add(table.getSequences("STOP")); i+=3; continue;} }
+            data.add(table.getSequences(String.valueOf(proteins.charAt(i))));
         }return data;
     }
 
