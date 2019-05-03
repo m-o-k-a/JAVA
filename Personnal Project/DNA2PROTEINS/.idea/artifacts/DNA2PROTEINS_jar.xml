@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DNA2PROTEINS:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DNA2PROTEINS_jar</output-path>
+    <root id="archive" name="DNA2PROTEINS.jar">
+      <element id="module-output" name="DNA2PROTEINS" />
+    </root>
+  </artifact>
+</component>
