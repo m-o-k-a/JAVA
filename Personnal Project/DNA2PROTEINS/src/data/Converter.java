@@ -2,6 +2,7 @@ package data;
 
 import java.util.*;
 
+import com.sun.xml.internal.ws.transport.Headers;
 import launch.Main;
 
 
@@ -26,6 +27,7 @@ public class Converter {
     public List<List<String>> proteinsToSequence(String proteins, Table table) {
         proteins = proteins.toUpperCase();
         List<List<String>> data = new ArrayList<>();
+        TreeMap dato = new TreeMap();
         for (int i = 0; i < proteins.length(); i++ ) {
             //special stop value
             if (i+4 <= proteins.length()) { if(proteins.substring(i,i+4).equals("STOP")) { data.add(table.getSequences("STOP")); i+=3; continue;} }

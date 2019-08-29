@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="apk" name="Dna To Proteins">
+    <output-path>$PROJECT_DIR$/out/artifacts/Dna_To_Proteins</output-path>
+    <properties id="android-properties">
+      <options>
+        <option name="keyStoreUrl" value="file://" />
+      </options>
+    </properties>
+    <root id="archive" name="Dna To Proteins.apk" />
+  </artifact>
+</component>
