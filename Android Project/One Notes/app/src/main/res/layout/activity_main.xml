@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1"
+        android:weightSum="4"
+        android:background="#FAECB4">
+        <!-- FIRST ROW: STYLE -->
+        <TableRow>
+
+            <TextView
+                android:id="@+id/styles"
+                android:layout_column="1"
+                android:clickable="true"
+                android:onClick="openStyles"
+                android:text="Styles"
+                android:textAlignment="center" />
+        </TableRow>
+        <!-- button of the first row, button are hidden in the beginning -->
+        <TableRow>
+
+            <Button
+                android:id="@+id/toB"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip"
+                android:layout_weight="1"
+                android:onClick="makeBold"
+                android:padding="10dip"
+                android:text="Bold"
+                android:visibility="gone"
+                android:background="#DEB887"/>
+
+            <Button
+                android:id="@+id/toI"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip"
+                android:layout_weight="1"
+                android:onClick="makeItalic"
+                android:padding="10dip"
+                android:text="Italic"
+                android:visibility="gone"
+                android:background="#DEB887"/>
+
+            <Button
+                android:id="@+id/toU"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip"
+                android:layout_weight="1"
+                android:onClick="makeUnderline"
+                android:padding="10dip"
+                android:text="Underline"
+                android:visibility="gone"
+                android:background="#DEB887"/>
+        </TableRow>
+
+        <!-- SECOND ROW: COLOR -->
+        <TableRow>
+
+            <TextView
+                android:id="@+id/colors"
+                android:layout_column="1"
+                android:clickable="true"
+                android:onClick="openColors"
+                android:text="Colors"
+                android:textAlignment="center" />
+        </TableRow>
+        <!-- button of the second row, button are hidden in the beginning -->
+        <TableRow>
+
+            <Button
+                android:id="@+id/colorSaddlebrown"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip"
+                android:layout_weight="1"
+                android:background="#8B4513"
+                android:onClick="makeSaddlebrown"
+                android:padding="10dip"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/colorGoldenrod"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip"
+                android:layout_weight="1"
+                android:background="#DAA520"
+                android:onClick="makeGoldenrod"
+                android:padding="10dip"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/colorBrown"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dip"
+                android:layout_weight="1"
+                android:background="#A52A2A"
+                android:onClick="makeBrown"
+                android:padding="10dip"
+                android:visibility="gone" />
+        </TableRow>
+
+        <!-- THIRD ROW: EDITTEXT -->
+        <TableRow>
+
+            <TextView
+                android:id="@+id/edit"
+                android:layout_column="1"
+                android:clickable="true"
+                android:onClick="openEdit"
+                android:text="Input"
+                android:textAlignment="center" />
+        </TableRow>
+        <TextView
+            android:layout_height="1sp"
+            android:background="#BC8F8F" />
+        <!-- edi text of the third row, button hidden in the beginning -->
+        <EditText
+            android:id="@+id/preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            android:inputType="textMultiLine"
+            android:lines="20"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_height="1sp"
+            android:background="#BC8F8F" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Touch To Update. You can also use other HTML balises to custom the text as you want ! (auto update will come in next updates)"
+            android:inputType="textMultiLine"
+            android:lines="20"
+            android:textSize="15sp" />
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="410dp"
+        android:layout_height="18dp"
+        android:text="V0.1 - Created By Eddy Ikhlef - m-o-k-a.github.io"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/layout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
