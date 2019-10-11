@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="game_of_life_student.main" target="11" />
+      <module name="game_of_life_student.test" target="11" />
+      <module name="gameoflife-aaa.main" target="11" />
+      <module name="gameoflife-aaa.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
